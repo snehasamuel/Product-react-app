@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './Header'
 
 const Viewpro = () => {
   return (
-    <div>Viewpro</div>
+    <div>
+        <Header/>
+    </div>
   )
 }
 
