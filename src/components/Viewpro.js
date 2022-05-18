@@ -6,25 +6,46 @@ const Viewpro = () => {
   return (
     <div>
         <Header/>
-        
+
+      <div className="container">
+
       
 
 <div className="container">
+
 <div className="row">
     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
         <div className="row g-3">
         {prolist.map((value,key) => {
 
-            return <div className="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-            <div className="card" >
-  <img src={value.image} className="card-img-top" alt="..."/>
+        return <div className="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div className="card" style={{height:600}}>
+<center>  <img style={{width:250,height:250}} src={value.image} className="card-img-top" alt="..."/></center>
   <div className="card-body">
-    <h5 className="card-title">{value.id}</h5>
+    
     <p class="card-text">{value.title}</p>
-    <p class="card-text">{value.description}</p>
+    <p class="card-text">
+      
+      <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Description
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        {value.description}
+      </div>
+    </div>
+  </div>
+  
+  
+</div></p>
     <p class="card-text">{value.category}</p>
     <p class="card-text">{value.price}</p>
+    <p class="card-text">{value.rating.rate}</p>
     
   
     <a href="#" class="btn btn-primary">Buy Now</a>
@@ -34,13 +55,16 @@ const Viewpro = () => {
         
 
        })}
+
        </div>
 
 </div>
 </div>
+
 </div>
 
-    </div>
+</div>
+</div>
   )
 }
 
