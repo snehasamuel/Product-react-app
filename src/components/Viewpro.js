@@ -22,6 +22,7 @@ const Viewpro = () => {
     <p class="card-text">{value.description}</p>
     <p class="card-text">{value.category}</p>
     <p class="card-text">{value.price}</p>
+    <p class="card-text">{value.rating.rate}</p>
     
   
     <a href="#" class="btn btn-primary">Buy Now</a>
